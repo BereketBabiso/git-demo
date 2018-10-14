@@ -1,0 +1,2 @@
+
+ hello in the new file. This is updated from the feature-1.0 branch.
