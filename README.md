@@ -23,3 +23,4 @@
 18. git push -u origin feature-1.0 // push the feature branch
 19. git push -u origin develop // push the develop branch
 20. git add -p , then select "y" ======> this is to stage hunk
+21. git push -u origin feature/CapUserIdManager
