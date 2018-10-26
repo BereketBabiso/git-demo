@@ -23,4 +23,14 @@
 18. git push -u origin feature-1.0 // push the feature branch
 19. git push -u origin develop // push the develop branch
 20. git add -p , then select "y" ======> this is to stage hunk
-21. git push -u origin feature/CapUserIdManager
+
+
+====================================================================
+1. git clone https://github.ford.com/SNITHY11/AccountService.git
+2. git branch
+3. git checkout -b feature/CapUserIdManager
+4. git branch
+5. git add .
+6. git commit -m "update on CAP User ID Manager"
+7. push -u origin feature/CapUserIdManager
+
