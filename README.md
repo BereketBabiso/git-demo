@@ -34,3 +34,5 @@
 6. git commit -m "update on CAP User ID Manager"
 7. push -u origin feature/CapUserIdManager
 
+8. gradlew clean build b
+
