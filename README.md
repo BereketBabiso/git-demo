@@ -1,3 +1,82 @@
+package com.ford.sca.cap.vehicle.delete.transport;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import java.util.Date;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.http.HttpStatus;
+
+@Getter
+@Setter
+public class GenericResponse {
+
+  //Ignore this field sending back to caller always
+  @JsonIgnore
+  private HttpStatus httpStatus;
+
+  //Ignore this field sending back to caller when it is null
+  @JsonInclude(JsonInclude.Include.NON_NULL)
+  private String responseMessage;
+
+  //Ignore this field sending back to caller when it is null
+  @JsonInclude(JsonInclude.Include.NON_NULL)
+  private String status;
+
+  //Ignore this field sending back to caller when it is null
+  @JsonInclude(JsonInclude.Include.NON_NULL)
+  private String errorMsgId;
+
+  //Ignore this field sending back to caller when it is null
+  @JsonInclude(JsonInclude.Include.NON_NULL)
+  private String errorMsg;
+
+  //Ignore this field sending back to caller when it is null
+  @JsonInclude(JsonInclude.Include.NON_NULL)
+  private Date errorTime;
+
+  /**
+   * Default no-arg constructor to aid specific extending subclasses.
+   **/
+  public GenericResponse() {
+    super();
+  }
+  
+  /**
+   * To generate {@link GenericResponse} for success response.
+   *
+   * @param httpStatus HttpStatus
+   * @param responseMessage Success message
+   */
+  public GenericResponse(HttpStatus httpStatus, String responseMessage) {
+    this.httpStatus = httpStatus;
+    this.status = responseMessage;
+  }
+
+  /**
+   * To generate {@link GenericResponse} for failure response.
+   *
+   * @param httpStatus HttpStatus
+   * @param status Failure message
+   * @param errorMsgId Error message ID
+   * @param errorMsg Error message
+   * @param errorTime When error happened
+   */
+  public GenericResponse(HttpStatus httpStatus, String status, String errorMsgId, String errorMsg,
+      Date errorTime) {
+    this.httpStatus = httpStatus;
+    this.status = status;
+    this.errorMsgId = errorMsgId;
+    this.errorMsg = errorMsg;
+    this.errorTime = errorTime;
+  }
+}
+
+
+
+
+
+
 =========git commands=============
 1. Install the git installer
 2. set user name just to explicitly inform git that anything add to git is users
