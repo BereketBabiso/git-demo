@@ -103,6 +103,8 @@ public class GenericResponse {
 19. git push -u origin develop // push the develop branch
 20. git add -p , then select "y" ======> this is to stage hunk
 21. rmdir .git /s , to remove .git folder
+22. to clone from a specific branch =====> 
+git clone --single-branch --branch LlidPouStatusCheck https://github.ford.com/SCACP/MaintainPrivacySummaryService.git
 
 
 ====================================================================
@@ -113,6 +115,8 @@ public class GenericResponse {
 5. git add .
 6. git commit -m "update on CAP User ID Manager"
 7. push -u origin feature/CapUserIdManager
+
+
 
 8. gradlew clean build b
 
